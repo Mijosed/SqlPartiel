@@ -1,3 +1,1 @@
-SELECT name
-FROM character
-ORDER BY level,xp,gold
+SELECT name FROM character ORDER BY level, gold;

@@ -1,1 +1,1 @@
-select title from quest ORDER BY length(title);
+SELECT title FROM quest ORDER BY length(title);
