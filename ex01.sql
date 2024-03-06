@@ -1,1 +1,1 @@
-select name from character;
+SELECT name FROM character;
