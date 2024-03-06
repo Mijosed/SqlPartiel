@@ -1,1 +1,1 @@
-select name from character where health = 0;
+SELECT name FROM character WHERE health = 0;
