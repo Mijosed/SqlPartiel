@@ -1,4 +1,4 @@
-SELECT ct.name 
-FROM creature_template ct
-LEFT JOIN creature c ON ct.id = c.gid
-WHERE c.id IS NULL;
+SELECT name FROM creature_template
+WHERE NOT EXISTS (
+    SELECT * FROM creature WHERE creature.gid = creature_template.id
+);
