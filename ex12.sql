@@ -1,4 +1,5 @@
-SELECT name FROM creature_template
-INNER JOIN creature ON creature.gid = creature_template.id
-INNER JOIN quest ON creature.id = quest.creature_start
-WHERE quest.creature_start = quest.creature_end GROUP BY name;
+SELECT creature_template.name 
+FROM creature_template
+JOIN creature ON creature.gid = creature_template.id
+JOIN quest ON creature.id = quest.creature_start AND creature.id = quest.creature_end
+GROUP BY creature_template.name;
